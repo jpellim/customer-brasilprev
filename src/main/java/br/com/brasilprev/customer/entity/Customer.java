@@ -5,10 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Entity
 @Data 
+@Builder
 public class Customer {
 
     @Id
@@ -22,10 +24,4 @@ public class Customer {
 	@Embedded
 	private Address address;
 	
-	public Customer(final String name, final String cpf, final Address address) {
-		this.name = name;
-		this.cpf = cpf;
-		this.address = address;
-	}
-
 }

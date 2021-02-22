@@ -25,7 +25,7 @@ public class CustomerRepositoryTests {
     	
     	Address address = new Address("02223-010", "Rua Bla", "São Paulo", "BR");
     	
-        entityManager.persist(new Customer("Jose da Silva", "123.456.789-09", address));
+        entityManager.persist(Customer.builder().name("Jose da Silva").cpf("123.456.789-09").address(address));
                  
         Customer customer = repository.findByName("Jose da Silva");
          

@@ -10,9 +10,9 @@ public interface CustomerService {
 	
 	Customer findCustomerById(Integer id);
 	
-	void save(Customer customer);
+	Customer save(Customer customer);
 	
-	void update(Integer id, Customer customer);
+	Customer update(Integer id, Customer customer);
 	
 	void deleteById(Integer id);
 
